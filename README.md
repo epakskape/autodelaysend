@@ -4,7 +4,7 @@ This project adds support to Outlook to automatically delay the delivery of emai
 
 # Installation
 
-Download and run the installer for the current release. Note, this is not signed. Alternatively, you can build from source and publish your own installer.
+Download and run the `setup.exe` installer for the [latest release](https://github.com/epakskape/autodelaysend/releases/latest). Note, this is not signed. Alternatively, you can build from source and publish your own installer.
 
 To confirm that the add-in is installed, navigate to **File**, **Options**, and select **Add-ins**. You can then click the **Go...** button to manage COM Add-ins and confirm that the add-in is installed and enabled as shown here:
 
