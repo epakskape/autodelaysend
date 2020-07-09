@@ -1,3 +1,5 @@
 .vs
+*.csproj.user
 bin
 obj
+publish
