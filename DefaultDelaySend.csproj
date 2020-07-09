@@ -185,6 +185,7 @@
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
+    <None Include="DefaultDelaySend_TemporaryKey.pfx" />
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.cs</DependentUpon>
     </None>
@@ -210,7 +211,7 @@
     <ManifestKeyFile>DefaultDelaySend_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>381FF87A8262D8ABC5E6A7462636AC0BFE884FED</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>1911ED13E8F68AD6262218178A43CD7B83EE511F</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
