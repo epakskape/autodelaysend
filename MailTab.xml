@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="MailRibbon_Load">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabAddIns">
+        <group id="MyGroup"
+               label="Delay Send">
+          <checkBox id="overrideDelaySendCheckBox" label="Override Delay Send" onAction="overrideDelaySendCheckBox_onAction"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
+

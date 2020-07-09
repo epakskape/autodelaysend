@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="ExplorerRibbon_Load">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabAddIns">
+        <group id="MyGroup"
+               label="Delay Send">
+          <labelControl id="DelaySend_Label" label="Auto Delay Send"/>
+          <checkBox id="DelaySend_OutOfOfficeMonday" label="Monday" onAction="outOfOfficeDayCheckBox_onAction" getPressed="outOfOfficeDayCheckBox_getPressed"/>
+          <checkBox id="DelaySend_OutOfOfficeTuesday" label="Tuesday" onAction="outOfOfficeDayCheckBox_onAction" getPressed="outOfOfficeDayCheckBox_getPressed"/>
+          <checkBox id="DelaySend_OutOfOfficeWednesday" label="Wednesday" onAction="outOfOfficeDayCheckBox_onAction" getPressed="outOfOfficeDayCheckBox_getPressed"/>
+          <checkBox id="DelaySend_OutOfOfficeThursday" label="Thursday" onAction="outOfOfficeDayCheckBox_onAction" getPressed="outOfOfficeDayCheckBox_getPressed"/>
+          <checkBox id="DelaySend_OutOfOfficeFriday" label="Friday" onAction="outOfOfficeDayCheckBox_onAction" getPressed="outOfOfficeDayCheckBox_getPressed"/>
+          <checkBox id="DelaySend_OutOfOfficeSaturday" label="Saturday" onAction="outOfOfficeDayCheckBox_onAction" getPressed="outOfOfficeDayCheckBox_getPressed"/>
+          <checkBox id="DelaySend_OutOfOfficeSunday" label="Sunday" onAction="outOfOfficeDayCheckBox_onAction" getPressed="outOfOfficeDayCheckBox_getPressed"/>
+          <editBox id="DelaySend_StartBusinessHour" label="Start Work Hour" onChange="businessHourEditBox_onChange" getText="businessHourEditBox_getText"/>
+          <editBox id="DelaySend_EndBusinessHour" label="End Work Hour" onChange="businessHourEditBox_onChange" getText="businessHourEditBox_getText"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
+
