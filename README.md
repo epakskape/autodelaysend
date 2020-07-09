@@ -14,11 +14,11 @@ To confirm that the add-in is installed, navigate to **File**, **Options**, and 
 
 This add-in supports customizing the dates and times that are outside of business hours. This configuration should roam with your user profile so that you don't need to redefine it on every machine where you use Outlook. You can do this by accessing the **Add-ins** tab of the Outlook window as shown here:
 
-![Configuration via explorer ribbon](https://github.com/epakskape/autodelaysend/raw/master/doc/explorer_ribbon.jpg)
+![Configuration via explorer ribbon](https://github.com/epakskape/autodelaysend/raw/master/doc/explorer_ribbon.JPG)
 
 In the event that you need to override delay delivery for an email being sent outside of business hours, you can do so via the **Add-ins** tab for a mail item as shown here:
 
-![Overriding delay send via mail ribbon](https://github.com/epakskape/autodelaysend/raw/master/doc/mail_ribbon.jpg)
+![Overriding delay send via mail ribbon](https://github.com/epakskape/autodelaysend/raw/master/doc/mail_ribbon.JPG)
 
 # How it works
 
