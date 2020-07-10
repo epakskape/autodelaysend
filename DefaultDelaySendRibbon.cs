@@ -18,10 +18,19 @@ namespace DefaultDelaySend
     public class DefaultDelaySendRibbon : Office.IRibbonExtensibility
     {
         private Office.IRibbonUI explorerRibbon;
-        private Office.IRibbonUI mailRibbon;
 
         public DefaultDelaySendRibbon()
         {
+        }
+
+        private void Inspectors_NewInspector(Inspector Inspector)
+        {
+            ((Outlook.InspectorEvents_10_Event)Inspector).Activate += DefaultDelaySendRibbon_Activate;
+        }
+
+        private void DefaultDelaySendRibbon_Activate()
+        {
+            this.explorerRibbon.Invalidate();
         }
 
         #region IRibbonExtensibility Members
@@ -49,11 +58,8 @@ namespace DefaultDelaySend
         public void ExplorerRibbon_Load(Office.IRibbonUI ribbonUI)
         {
             this.explorerRibbon = ribbonUI;
-        }
 
-        public void MailRibbon_Load(Office.IRibbonUI ribbonUI)
-        {
-            this.mailRibbon = ribbonUI;
+            Globals.ThisAddIn.Application.Inspectors.NewInspector += Inspectors_NewInspector;
         }
 
         public void outOfOfficeDayCheckBox_onAction(Office.IRibbonControl control, bool isPressed)
@@ -197,6 +203,11 @@ namespace DefaultDelaySend
                     evaluateDelaySendOverrideLambda(item as Outlook.MailItem);
                 }
             }
+        }
+
+        public bool overrideDelaySendCheckBox_getPressed(Office.IRibbonControl control)
+        {
+            return false;
         }
 
         #endregion
