@@ -48,6 +48,14 @@ namespace DefaultDelaySend
             Application.ItemSend += Application_ItemSend;
         }
 
+        public bool IsOutsideOfBusinessHours(DateTime sendDate)
+        {
+            return
+                ((OutOfOfficeDays.Contains(sendDate.DayOfWeek)) ||
+                    (sendDate.Hour >= DefaultDelaySendSettings.Default.EndBusinessHour) ||
+                    (sendDate.Hour < DefaultDelaySendSettings.Default.StartBusinessHour));
+        }
+
         private void Application_ItemSend(object item, ref bool Cancel)
         {
             // Only apply delay delivery to mail items.

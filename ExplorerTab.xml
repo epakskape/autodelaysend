@@ -5,7 +5,7 @@
       <tab idMso="TabAddIns">
         <group id="MyGroup"
                label="Delay Send">
-          <labelControl id="DelaySend_Label" label="Auto Delay Send"/>
+          <labelControl id="AutoDelaySendLabel" getLabel="AutoDelaySendLabel_getLabel"/>
           <checkBox id="DelaySend_OutOfOfficeMonday" label="Monday" onAction="outOfOfficeDayCheckBox_onAction" getPressed="outOfOfficeDayCheckBox_getPressed"/>
           <checkBox id="DelaySend_OutOfOfficeTuesday" label="Tuesday" onAction="outOfOfficeDayCheckBox_onAction" getPressed="outOfOfficeDayCheckBox_getPressed"/>
           <checkBox id="DelaySend_OutOfOfficeWednesday" label="Wednesday" onAction="outOfOfficeDayCheckBox_onAction" getPressed="outOfOfficeDayCheckBox_getPressed"/>

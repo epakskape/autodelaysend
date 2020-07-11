@@ -62,6 +62,18 @@ namespace DefaultDelaySend
             Globals.ThisAddIn.Application.Inspectors.NewInspector += Inspectors_NewInspector;
         }
 
+        public string AutoDelaySendLabel_getLabel(Office.IRibbonControl control)
+        {
+            if (Globals.ThisAddIn.IsOutsideOfBusinessHours(DateTime.Now))
+            {
+                return "Auto Delay Send (Active)";
+            }
+            else
+            {
+                return "Auto Delay Send (Inactive)";
+            }
+        }
+
         public void outOfOfficeDayCheckBox_onAction(Office.IRibbonControl control, bool isPressed)
         {
             if (control.Id.StartsWith("DelaySend_OutOfOffice"))
@@ -76,6 +88,8 @@ namespace DefaultDelaySend
                     propertyInfo.SetValue(DefaultDelaySendSettings.Default, isPressed);
                     DefaultDelaySendSettings.Default.Save();
                     ThisAddIn.RefreshSettings();
+
+                    explorerRibbon.InvalidateControl("AutoDelaySendLabel");
                 }
             }
         }
@@ -122,6 +136,8 @@ namespace DefaultDelaySend
 
                 DefaultDelaySendSettings.Default.Save();
                 ThisAddIn.RefreshSettings();
+
+                explorerRibbon.InvalidateControl("AutoDelaySendLabel");
             }
         }
 
